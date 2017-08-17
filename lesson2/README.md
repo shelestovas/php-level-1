@@ -1,4 +1,4 @@
-# Демонстрация решения:
+# Демонстрация решения задач:
 
 1. Задача №1 - http://php1.webkl.ru/lesson2/task1.php
 2. Задача №2 - http://php1.webkl.ru/lesson2/task2.php
