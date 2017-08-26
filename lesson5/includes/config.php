@@ -1,5 +1,7 @@
 <?php
 
+ini_set('display_errors', 0);
+
 const IMAGE_SIZES = [
     'thumbnail' => [
         'width' => 150,
@@ -27,4 +29,4 @@ $DB = mysqli_connect(
     DATABASE['username'],
     DATABASE['password'],
     DATABASE['database']
-);
+) or die('<h1>Ошибка соединения с базой</h1>');
