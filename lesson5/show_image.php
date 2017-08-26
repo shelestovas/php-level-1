@@ -9,6 +9,10 @@ if(!isset($_GET['id'])) {
 }
 
 $id = $_GET['id'];
+
+$sql = 'UPDATE images SET views = views + 1 WHERE id = ' . $id;
+mysqli_query($DB, $sql);
+
 $sql = 'SELECT * FROM images WHERE id = ' . $id;
 $image = mysqli_query($DB, $sql);
 
@@ -22,8 +26,6 @@ if(!$image || $image->num_rows == 0) {
 
 $image = $image->fetch_object();
 
-$sql = 'UPDATE images SET views = views + 1 WHERE id = ' . $id;
-mysqli_query($DB, $sql);
 
 ?>
 <!DOCTYPE html>
